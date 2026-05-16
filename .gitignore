@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+build/
+
+# cloudflare
+.wrangler/
+.open-next/
+.dev.vars
+
+# env
+.env
+.env.local
+.env*.local
+
+# misc
+.DS_Store
+*.pem
+*.log
+*.tsbuildinfo
+next-env.d.ts
+
+# drizzle
+drizzle/migrations-meta/
+
+# editor
+.vscode/
+.idea/

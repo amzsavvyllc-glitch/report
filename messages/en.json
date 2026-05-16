@@ -1,0 +1,54 @@
+{
+  "app": {
+    "name": "Keeta Rider Ops",
+    "tagline": "Unified operations for delivery teams"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "riders": "Riders",
+    "performance": "Performance",
+    "incidents": "Incidents",
+    "documents": "Documents",
+    "logout": "Log out"
+  },
+  "auth": {
+    "managerLogin": "Manager login",
+    "riderLogin": "Rider login",
+    "email": "Email",
+    "password": "Password",
+    "phone": "Phone number",
+    "code": "Verification code",
+    "sendCode": "Send code",
+    "verify": "Verify",
+    "signIn": "Sign in",
+    "wrongCredentials": "Wrong email or password",
+    "rateLimited": "Too many attempts. Try again later.",
+    "notFound": "No rider profile for this number. Ask your manager to add you."
+  },
+  "riders": {
+    "title": "Riders",
+    "new": "Add rider",
+    "search": "Search by name or phone",
+    "name": "Name",
+    "phone": "Phone",
+    "status": "Status",
+    "bike": "Bike",
+    "language": "Language",
+    "statusActive": "Active",
+    "statusOff": "Off duty",
+    "statusSuspended": "Suspended",
+    "empty": "No riders yet. Add your first rider."
+  },
+  "home": {
+    "welcome": "Welcome, {name}",
+    "reportIncident": "Report incident",
+    "myDocuments": "My documents",
+    "myStats": "My stats"
+  },
+  "languages": {
+    "en": "English",
+    "ur": "اردو",
+    "hi": "हिन्दी",
+    "bn": "বাংলা"
+  }
+}

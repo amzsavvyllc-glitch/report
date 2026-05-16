@@ -1,0 +1,40 @@
+name = "keeta-rider-ops"
+main = ".open-next/worker.js"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# D1 — primary database
+[[d1_databases]]
+binding = "DB"
+database_name = "keeta-rider-ops"
+database_id = "REPLACE_WITH_D1_ID_AFTER_wrangler_d1_create"
+migrations_dir = "drizzle/migrations"
+
+# R2 — incident photos, document scans, voice notes, perf CSV originals
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "keeta-rider-ops-files"
+
+# KV — rate limits, daily AI spend counter, sessions cache
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_WITH_KV_ID_AFTER_wrangler_kv_namespace_create"
+
+# Daily cron: document expiry scan at 06:00 UTC
+[triggers]
+crons = ["0 6 * * *"]
+
+[vars]
+DEFAULT_COUNTRY_CODE = "+966"
+AI_DAILY_BUDGET_CENTS = "2000"
+
+# Secrets set via: wrangler secret put <NAME>
+# ANTHROPIC_API_KEY
+# TWILIO_ACCOUNT_SID
+# TWILIO_AUTH_TOKEN
+# TWILIO_VERIFY_SERVICE_SID
+# SESSION_SECRET
