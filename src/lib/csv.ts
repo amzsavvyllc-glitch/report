@@ -84,8 +84,13 @@ export function parseKeetaCsv(text: string): ParsedKeetaRow[] {
         field === "customerRating"
       ) {
         out[field] = numberOr(v, null);
-      } else {
-        out[field] = (v ?? "").toString().trim() || null;
+      } else if (
+        field === "externalRiderRef" ||
+        field === "riderNameRaw" ||
+        field === "riderPhoneRaw"
+      ) {
+        const s = (v ?? "").toString().trim();
+        out[field] = s.length ? s : null;
       }
     }
     return out;
