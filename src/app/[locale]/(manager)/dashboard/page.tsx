@@ -4,6 +4,8 @@ import { db, schema } from "@/lib/db";
 import { sql } from "drizzle-orm";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function ManagerDashboard({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

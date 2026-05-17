@@ -1,10 +1,11 @@
-import { handle } from "hono/vercel";
 import { app } from "@/server/app";
 
-export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
-export const GET = handle(app);
-export const POST = handle(app);
-export const PUT = handle(app);
-export const PATCH = handle(app);
-export const DELETE = handle(app);
+const handler = (req: Request) => app.fetch(req);
+
+export const GET = handler;
+export const POST = handler;
+export const PUT = handler;
+export const PATCH = handler;
+export const DELETE = handler;

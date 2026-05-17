@@ -3,6 +3,8 @@ import { requireManager } from "@/lib/rbac";
 import { db, schema } from "@/lib/db";
 import { desc } from "drizzle-orm";
 
+export const dynamic = "force-dynamic";
+
 export default async function IncidentsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
