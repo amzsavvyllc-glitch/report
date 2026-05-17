@@ -11,7 +11,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "keeta-rider-ops"
-database_id = "REPLACE_WITH_D1_ID_AFTER_wrangler_d1_create"
+database_id = "184ebb09-a39a-45e5-bf85-3e150100999d"  # placeholder — replace with real ID from `wrangler d1 create keeta-rider-ops`
 migrations_dir = "drizzle/migrations"
 
 # R2 — incident photos, document scans, voice notes, perf CSV originals
@@ -22,7 +22,7 @@ bucket_name = "keeta-rider-ops-files"
 # KV — rate limits, daily AI spend counter, sessions cache
 [[kv_namespaces]]
 binding = "KV"
-id = "REPLACE_WITH_KV_ID_AFTER_wrangler_kv_namespace_create"
+id = "be6d22acd59293bbd3632c403e8335ca"  # placeholder — replace with real ID from `wrangler kv namespace create keeta-kv`
 
 # Daily cron: document expiry scan at 06:00 UTC
 [triggers]
